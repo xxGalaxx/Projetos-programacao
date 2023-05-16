@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            body {
+                background-color: darkcyan;
+                width: 100%;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                display: flex;
+
+            }
+
+            .modal{
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+                padding: 30px;
+                border-radius: 10px;
+                width: 30%;
+            }
+            span{
+                margin: 10px auto;
+                text-align: justify;
+            }
+            .btn-close {
+                margin-top: 10px;
+                color: #fff;
+                cursor: pointer;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                background-color: darkblue;
+            }
+            .btn-open{
+                background-color: darkblue;
+                height: 56px;
+                width: 100px;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .container {
+                width: 100vw;
+                position: fixed;
+                top: 30px;
+                z-index: 999;
+                display: none;
+                justify-content: center;
+                align-items: center;
+            }
+            .active{
+                display: flex;
+            }
+            .active .modal{
+                animation: modal .4s;
+            }
+            @keyframes modal {
+                from{
+                    opacity: 0;
+                    transform: translate3d(0, -60px, 0);
+                }
+                to{
+                    opacity: 1;
+                    transform: translate(0, 0, 0);
+                }
+            }
+
+
+        </style>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="EI=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> slideshow </title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <main class="container">
+            <div class="modal">
+                <h2>Titulo</h2>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae magnam quae neque repellendus tempora quo! Placeat doloremque alias accusamus laborum harum sed recusandae, excepturi animi. Minima quisquam officia quibusdam ipsum?
+                </span>
+                <button class="btn-close" onclick="onClose()">Fechar</button>
+            </div>
+        </main>
+        <button class="btn-open" onclick="onOpen()"->Abrir modal</button>
+        <script src="modal.js"></script>
+    </body>
+</html>

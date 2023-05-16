@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            body{
+                background-color:aqua;
+            }
+            main{
+                width: 100%;
+                padding: 10px;
+
+            }
+            head {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+
+            input{
+                padding: 5px;
+                outline: none;
+            }
+            button {
+                padding: 5px;
+                outline: none;
+                cursor: pointer;
+
+            }
+            img{
+                min-width: 120px;
+                margin-left: 10px;
+                background-image: radial-gradient(#b5b5b5, f7f7f7 70%);
+            }
+            .content {
+                margin-top: 10px;
+                word-break: break-all;
+            }
+   
+
+
+
+        </style>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="EI=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather </title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <main>
+        <header>
+            <input type="text"/>
+            <button type="submit">Pesquisar</button>
+        </header>
+        <div class="content" style="display:none;">
+        <section>
+            <h2 id="city"></h2>
+            <span id="degree"></span>
+        </section>
+        <img src=""alt="clima"/>
+        </div>
+        </main>
+        <script src="tempo.js"></script>
+    </body>
+</html>
