@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+            .kanban {
+                display: flex;
+                justify-content: center;
+                min-height: 400px;
+                gap: 10px;
+                padding: 10px;
+            }
+            .column{
+                padding: 10px;
+                min-width: 200px;
+                border-radius: 5px;
+                background-color: cornflowerblue;
+            }
+            .item{
+                background-color: white;
+                border-radius: 5px;
+                padding:  10px;
+                margin: 10px 0;
+            }
+            .dragging {
+                opacity: 0.5;
+            }
+        </style>
+      
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="EI=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Kanban Board</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="kanban">
+            <div class="item" draggable="true">card 01 </div>
+                <div class="item" draggable="true">card 02</div>
+        </div>
+        <div class="column">
+            <div class="item" draggable="true">card 03</div>
+            <div class="item" draggable="true">card 04</div>
+
+        </div>
+        <div class="column">
+            <div class="item" draggable="true">card 05</div>
+            <div class="item" draggable="true">card 06</div>
+        </div>
+    </div>
+    <script src="igual.js"></script>
+    </body>
+</html>
